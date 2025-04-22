@@ -1,0 +1,78 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+components:
+  schemas:
+    QuoteGenerationRequest:
+      type: object
+      required:
+        - opportunityId
+      description: Request to generate a quote, includes the opportunity ID to extract
+        product information
+      properties:
+        opportunityId:
+          type: string
+          description: A record Id for the opportunity
+    QuoteGenerationResponse:
+      type: object
+      description: Response includes the record Id of the generated quote.
+      properties:
+        quoteId:
+          type: string
+          description: A record Id for the generated quote
+paths:
+  /api/generatequote:
+    post:
+      operationId: generateQuote
+      summary: Generate a Quote for a given Opportunity
+      tags:
+        - Pricing Engine
+      description: Calculate pricing and generate an associated Quote.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - opportunityId
+              $ref: "#/components/schemas/QuoteGenerationRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuoteGenerationResponse"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: boolean
+                  message:
+                    type: string
+                    description: Error message when client context is missing or invalid
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: boolean
+                  message:
+                    type: string
+                    description: Error message when an unexpected error occurs
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+tags:
+  - name: Pricing Engine
+    description: Leverage dynamic pricing calculation logic and rules to calculate
+      pricing information.

@@ -1,0 +1,45 @@
+{
+  "name": "heroku-integration-pattern-org-action-nodejs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Node.js port of the Heroku Integration Pattern for Org Action",
+  "main": "src/server/app.js",
+  "scripts": {
+    "start": "node src/server/app.js -p $APP_PORT",
+    "dev": "node --watch src/server/app.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "@fastify/env": "^5.0.0",
+    "@fastify/multipart": "^9.0.3",
+    "@fastify/postgres": "^6.0.2",
+    "@fastify/redis": "^7.0.0",
+    "@fastify/swagger": "^9.5.0",
+    "@fastify/swagger-ui": "^5.2.2",
+    "@heroku/salesforce-sdk-nodejs": "0.3.4-ea",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.3.1",
+    "fastify-plugin": "^5.0.1",
+    "jsforce": "2.0.0-beta.24",
+    "lodash": "^4.17.21",
+    "pino": "^8.19.0",
+    "undici": "^6.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.2.5"
+  }
+}

@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Heroku
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Test artifacts
+.nyc_output/
+junit.xml
+
+# Temporary files
+tmp/
+temp/ 
