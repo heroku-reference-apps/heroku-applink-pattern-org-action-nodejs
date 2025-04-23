@@ -41,3 +41,6 @@ junit.xml
 # Temporary files
 tmp/
 temp/ 
+
+# Salesforce DX
+.sfdx
