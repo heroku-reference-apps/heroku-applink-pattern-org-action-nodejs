@@ -183,7 +183,7 @@ Session-based permission set deactivated successfully.
 
 ## Invoking from Agentforce
 
-Consult the more in-depth Heroku and Agentforce Tutorial [here](https://github.com/heroku-examples/heroku-agentforce-tutorial/tree/heroku-integration). 
+Consult the more in-depth Heroku and Agentforce Tutorial [here](https://github.com/heroku-examples/heroku-agentforce-tutorial). 
 
 ## Technical Information
 - The pricing engine logic is implemented in the `pricingEngine.js` source file, under the `src/server/services` directory. It demonstrates how to query and insert records into Salesforce.
