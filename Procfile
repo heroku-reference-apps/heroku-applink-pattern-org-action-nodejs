@@ -1,1 +1,1 @@
-web: APP_PORT=3000 heroku-applink-service-mesh npm start
+web: APP_PORT=3000 heroku-applink-service-mesh-latest-amd64 npm start
