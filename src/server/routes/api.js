@@ -6,9 +6,15 @@ const quoteGenerationSchema = {
   summary: 'Generate a Quote for a given Opportunity',
   description: 'Calculate pricing and generate an associated Quote.',
   operationId: 'generateQuote',
+  'x-sfdc': {
+    heroku: {
+      authorization: {
+        connectedApp: 'GenerateQuoteConnectedApp',
+        permissionSet: 'GenerateQuotePermissions'
+      }
+    }
+  },  
   body: {
-    type: 'object',
-    required: ['opportunityId'],
     $ref: 'QuoteGenerationRequest#'
   },
   response: {
