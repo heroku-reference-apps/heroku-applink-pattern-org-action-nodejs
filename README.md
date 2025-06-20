@@ -62,6 +62,7 @@ Once imported grant permissions to users to invoke your code using the following
 
 ```bash
 sf org assign permset --name GenerateQuote -o my-org
+sf org assign permset --name GenerateQuotePermissions -o my-org
 ```
 
 Confirm it has started:
