@@ -24,7 +24,7 @@
     "@fastify/redis": "^7.0.0",
     "@fastify/swagger": "^9.5.0",
     "@fastify/swagger-ui": "^5.2.2",
-    "@heroku/salesforce-sdk-nodejs": "0.3.4-ea",
+    "@heroku/applink": "^1.0.0-ea.1",
     "dotenv": "^16.5.0",
     "fastify": "^5.3.1",
     "fastify-plugin": "^5.0.1",

@@ -3,7 +3,7 @@ import fp from 'fastify-plugin';
 export const salesforcePlugin = fp(async function (fastify, opts) {
   console.log('🔌 Registering Salesforce middleware plugin...');
   // Dynamic import of SDK
-  const salesforceSdk = await import('@heroku/salesforce-sdk-nodejs');
+  const salesforceSdk = await import('@heroku/applink');
   // Decorate request with salesforce object only
   fastify.decorateRequest('salesforce', null);
 

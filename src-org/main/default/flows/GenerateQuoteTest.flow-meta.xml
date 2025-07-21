@@ -68,7 +68,7 @@
     <status>Active</status>
     <variables>
         <name>GenerateQuoteRequest</name>
-        <apexClass>ExternalService__GenerateQuote_QuoteGenerationRequest</apexClass>
+        <apexClass>herokuapplink__GenerateQuote_QuoteGenerationRequest</apexClass>
         <dataType>Apex</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

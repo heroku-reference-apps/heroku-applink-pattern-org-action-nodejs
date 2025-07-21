@@ -33,11 +33,12 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              required:
-                - opportunityId
               $ref: "#/components/schemas/QuoteGenerationRequest"
-        required: true
+      x-sfdc:
+        heroku:
+          authorization:
+            connectedApp: GenerateQuoteConnectedApp
+            permissionSet: GenerateQuotePermissions
       responses:
         "200":
           description: OK
