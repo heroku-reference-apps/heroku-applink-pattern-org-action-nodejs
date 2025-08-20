@@ -1,0 +1,23 @@
+{
+  "name": "Heroku AppLink - Extending Apex, Flow and Agentforce - Node.js",
+  "description": "This sample demonstrates importing a Heroku application into an org to enable Apex, Flow, and Agentforce to call out to Heroku.",
+  "repository": "https://github.com/heroku-reference-apps/heroku-applink-pattern-org-action-nodejs",
+  "keywords": [
+    "nodejs",
+    "openapi",
+    "agentforce"
+  ],
+  "addons": [
+    {
+      "plan": "heroku-applink"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/heroku-applink-service-mesh"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

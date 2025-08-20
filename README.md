@@ -43,6 +43,11 @@ You can now also view the **Quote** by refreshing the **Opportunity** page withi
 
 ## Deploying and Testing from Apex and Flow
 
+
+You can deploy this application to your Heroku account using the button below or manually via the CLI.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku-reference-apps/heroku-integration-pattern-org-action-nodejs)
+
 To test from Apex, Flow and other tools within your Salesforce org you must deploy the code and import it into your org. The following commands create a Heroku application and configure Heroku AppLink. Heroku AppLink and associated buildpack allows secure authenticated access from within your code and visibility of your code from Apex, Flow and Agentforce. After this configuration, code is not accessible from the public internet, only from within an authorized Salesforce org.
 
 Next install and configure Heroku AppLink:
@@ -52,7 +57,6 @@ heroku create
 heroku addons:create heroku-applink
 heroku buildpacks:add --index=1 heroku/heroku-applink-service-mesh
 heroku buildpacks:add heroku/nodejs
-heroku config:set HEROKU_APP_ID="$(heroku apps:info --json | jq -r '.app.id')"
 git push heroku main
 heroku salesforce:connect my-org
 heroku salesforce:publish api-docs.yaml --client-name GenerateQuote --connection-name my-org --authorization-connected-app-name GenerateQuoteConnectedApp --authorization-permission-set-name GenerateQuotePermissions
